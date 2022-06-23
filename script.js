@@ -8,6 +8,8 @@
 // 8. Stampare in console FizzBuzz al posto dei numeri divisibili sia per 3 che per 5
 // 9. Stampare in console il numero se non è divisibile ne per 3 ne per 5
 
+const row = document.getElementById('row');
+let listOfNumber = '<ul>'
 
 let number = '';
 
@@ -16,11 +18,19 @@ for (let i = 1; i <= 100; i++){
 
     if (i % 3 == 0 && i % 5 == 0){
         console.log('FizzBuzz');
+        listOfNumber += `<li>FizzBuzz</li>`
     } else if (i % 3 == 0){
         console.log('Fizz');
+        listOfNumber += `<li>Fizz</li>`
     } else if (i % 5 == 0){
         console.log('Buzz');
+        listOfNumber += `<li>Buzz</li>`
     } else {
         console.log(i);
+        listOfNumber += `<li>${i}</li>`
     }
 }
+
+listOfNumber += '</ul>'
+
+row.innerHTML = listOfNumber;
