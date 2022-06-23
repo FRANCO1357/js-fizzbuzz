@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 2rem;
+}
+
+#container{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem -0.5rem;
+}
+
+.col{
+    width: calc(100% / 10);
+    height: 100px;
+    padding: 0.5rem;
+}
+
+.card{
+    background-color: dodgerblue;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    box-shadow: 0 0 5px black;
+}
+
+.fizz{
+    background-color: limegreen;
+}
+
+.buzz{
+    background-color: hotpink;
+}
+
+.fizzbuzz{
+    background-color: coral;
+}
+
+.col:hover .card{
+    transform: scaleX(-1);
+    color: transparent;
+    background-image: url('js.png');
+    background-size: cover; 
+}
